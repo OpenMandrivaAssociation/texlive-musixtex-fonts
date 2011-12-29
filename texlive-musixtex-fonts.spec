@@ -17,8 +17,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
 
 %description
 These are fonts for use with MusixTeX; they are provided both
@@ -26,20 +24,12 @@ as original Metafont source, and as converted Adobe Type 1. The
 bundle renders the older (Type 1 fonts only) bundle musixtex-
 t1fonts obsolete.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -285,7 +275,6 @@ t1fonts obsolete.
 %doc %{_texmfdistdir}/doc/fonts/musixtex-fonts/gpl.txt
 %doc %{_texmfdistdir}/doc/fonts/musixtex-fonts/musixtex-fonts-install.pdf
 %doc %{_texmfdistdir}/doc/fonts/musixtex-fonts/musixtex-fonts-install.tex
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -296,5 +285,3 @@ t1fonts obsolete.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}

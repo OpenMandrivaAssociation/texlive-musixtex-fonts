@@ -285,3 +285,15 @@ t1fonts obsolete.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts doc %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20111027-2
++ Revision: 754237
+- Rebuild to reduce used resources
+
+* Thu Nov 10 2011 Paulo Andrade <pcpa@mandriva.com.br> 20111027-1
++ Revision: 729689
+- texlive-musixtex-fonts
+- texlive-musixtex-fonts
+

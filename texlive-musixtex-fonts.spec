@@ -1,12 +1,12 @@
-# revision 24517
+# revision 28934
 # category Package
 # catalog-ctan /fonts/musixtex-fonts
-# catalog-date 2011-10-27 10:28:55 +0200
+# catalog-date 2013-01-24 16:57:55 +0100
 # catalog-license gpl
 # catalog-version undef
 Name:		texlive-musixtex-fonts
-Version:	20111027
-Release:	2
+Version:	20130124
+Release:	1
 Summary:	Fonts used by MusixTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/musixtex-fonts
@@ -269,10 +269,8 @@ t1fonts obsolete.
 %{_texmfdistdir}/fonts/type1/public/musixtex-fonts/xslz20d.pfb
 %{_texmfdistdir}/fonts/type1/public/musixtex-fonts/xtie20.pfb
 %doc %{_texmfdistdir}/doc/fonts/musixtex-fonts/CHANGES.psfonts
-%doc %{_texmfdistdir}/doc/fonts/musixtex-fonts/ChangeLog
 %doc %{_texmfdistdir}/doc/fonts/musixtex-fonts/README
 %doc %{_texmfdistdir}/doc/fonts/musixtex-fonts/README.psfonts
-%doc %{_texmfdistdir}/doc/fonts/musixtex-fonts/gpl.txt
 %doc %{_texmfdistdir}/doc/fonts/musixtex-fonts/musixtex-fonts-install.pdf
 %doc %{_texmfdistdir}/doc/fonts/musixtex-fonts/musixtex-fonts-install.tex
 
@@ -285,15 +283,3 @@ t1fonts obsolete.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20111027-2
-+ Revision: 754237
-- Rebuild to reduce used resources
-
-* Thu Nov 10 2011 Paulo Andrade <pcpa@mandriva.com.br> 20111027-1
-+ Revision: 729689
-- texlive-musixtex-fonts
-- texlive-musixtex-fonts
-

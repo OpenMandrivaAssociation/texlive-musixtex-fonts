@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-musixtex-fonts
 Version:	20130124
-Release:	6
+Release:	7
 Summary:	Fonts used by MusixTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/musixtex-fonts

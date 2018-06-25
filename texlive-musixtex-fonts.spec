@@ -1,5 +1,5 @@
 Name:		texlive-musixtex-fonts
-Version:	20170414
+Version:	20180303
 Release:	1
 Summary:	Fonts used by MusixTeX
 Group:		Publishing

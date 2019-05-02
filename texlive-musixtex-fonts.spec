@@ -1,6 +1,6 @@
 Name:		texlive-musixtex-fonts
-Version:	20180303
-Release:	2
+Version:	20190228
+Release:	1
 Summary:	Fonts used by MusixTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/musixtex-fonts

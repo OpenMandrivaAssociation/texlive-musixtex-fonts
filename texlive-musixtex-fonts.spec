@@ -12,10 +12,18 @@ Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/musixtex-fonts.r
 Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/musixtex-fonts.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
 BuildSystem:	texlive
-Provides:	texlive(%{tl_name}) = %{tl_revision}
+Requires:	texlive-tlpkg
+Provides:	texlive(%{tl_name}) = %{version}
 
 %description
 These are fonts for use with MusixTeX; they are provided both as
 original Metafont source, and as converted Adobe Type 1. The bundle
 renders the older (Type 1 fonts only) bundle musixtex-t1fonts obsolete.
 
+
+%install -a
+mkdir -p %{buildroot}%{_texmf_updmap_d}
+cat > %{buildroot}%{_texmf_updmap_d}/%{tl_name} <<'TL_DROPIN_EOF'
+# from musixtex-fonts:
+MixedMap musix.map
+TL_DROPIN_EOF
